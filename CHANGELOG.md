@@ -1,5 +1,11 @@
 # Devo App Widgets
 
+## v1.0.1
+
+**Release date**: 2022-09-28
+
+- Generate documentation
+
 ## v1.0.0
 
 **Release date**: 2022-09-28
