@@ -1,0 +1,19 @@
+.dvapp-header-variant {
+  left: 5px;
+  vertical-align: center;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: relative;
+  font-family: Museo Sans, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #3c4952;
+}
+
+h3.dvapp-header-variant,
+.rs-drawer h3.dvapp-header-variant {
+  /* H3 */
+  font-size: 18px;
+  line-height: 20px;
+}

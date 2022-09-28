@@ -1,0 +1,101 @@
+.ApexColumn .btn-row,
+.rs-drawer .ApexColumn .btn-row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.ApexColumn,
+.rs-drawer .ApexColumn {
+  width: 100%;
+}
+
+.ApexColumn .btn-row .category-btn,
+.rs-drawer .ApexColumn .btn-row .category-btn {
+  margin-right: 10px;
+  margin-top: 4px;
+  padding: 4px 12px;
+  position: static;
+  height: 24px;
+  background: #e1eaf0;
+  border-radius: 9999px;
+  vertical-align: center;
+  align-items: center;
+  font-family: Museo Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.ApexColumn .chart-btn,
+.rs-drawer .ApexColumn .chart-btn {
+  margin-right: 10px;
+  margin-top: 4px;
+  padding: 4px 12px;
+  position: static;
+  height: 24px;
+  background: #e1eaf0;
+  border-radius: 9999px;
+  vertical-align: center;
+  align-items: center;
+  font-family: Museo Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.ApexColumn .btn-row .category-btn.selected,
+.rs-drawer .ApexColumn .btn-row .category-btn.selected {
+  background-color: #a4c8f5;
+}
+
+.ApexColumn .btn-row.category .subset-btn,
+.rs-drawer .ApexColumn .btn-row.category .subset-btn {
+  padding: 4px 12px;
+  position: static;
+  height: 24px;
+  color: #3c4952;
+  font-family: Museo Sans, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.ApexColumn .btn-row.category .subset-btn.selected,
+.rs-drawer .ApexColumn .btn-row.category .subset-btn.selected {
+  color: #2a6cbd;
+}
+
+.ApexColumn .btn-row.category,
+.rs-drawer .ApexColumn .btn-row.category {
+  justify-content: center;
+  align-content: center;
+}
+
+.ApexColumn .apexcharts-legend,
+.rs-drawer .ApexColumn .apexcharts-legend {
+  text-align: left;
+}
+
+.ApexColumn .apexcharts-toolbar,
+.rs-drawer .ApexColumn .apexcharts-toolbar {
+  max-width: 200px;
+}
+
+.ApexColumn .apexcharts-toolbar-custom-icon .custom-icon,
+.rs-drawer .ApexColumn .apexcharts-toolbar-custom-icon .custom-icon {
+  width: 20px;
+  border: none;
+}
+
+.ApexColumn .chart-dropdown,
+.rs-drawer .ApexColumn .chart-dropdown {
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+  font-family: Museo Sans, sans-serif;
+}

@@ -1,0 +1,23 @@
+.SingleValue {
+  width: 100%;
+  font-family: Museo Sans, sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  height: 75px;
+  letter-spacing: -0.0192em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-bottom: 1px;
+}
+
+.dvapp-value {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 500;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 65px;
+}
