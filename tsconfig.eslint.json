@@ -1,0 +1,13 @@
+{
+  // this file is so we can lint files other than the ones included in tsconfig.json
+  // extend your base config so you don't have to redefine your compilerOptions
+  "extends": "./tsconfig.json",
+  "include": [
+    "components",
+    "index.ts",
+    ".eslintrc.js",
+    ".babelrc",
+    "jest.config.js",
+    "test/jest.setup.js"
+  ]
+}

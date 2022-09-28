@@ -1,0 +1,16 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        ["@parcel/babel-preset-env", { "bugfixes": true }],
+        [
+          "@babel/preset-react",
+          {
+            "runtime": "automatic"
+          }
+        ],
+        "@babel/preset-typescript"
+      ]
+    }
+  }
+}

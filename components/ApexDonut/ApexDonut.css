@@ -1,0 +1,20 @@
+.ApexDonut .apexcharts-legend,
+.rs-drawer .ApexDonut .apexcharts-legend {
+  top: 5px !important;
+}
+
+.ApexDonut .dvapp-panel-body,
+.rs-drawer .ApexDonut .dvapp-panel-body {
+  display: inline-block !important;
+}
+.ApexDonut .apexcharts-legend .apexcharts-legend-series,
+.rs-drawer .ApexDonut .apexcharts-legend .apexcharts-legend-series {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0px;
+}
+
+.ApexDonut,
+.rs-drawer .ApexDonut {
+  height: 100%;
+}

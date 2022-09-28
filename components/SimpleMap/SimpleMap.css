@@ -1,0 +1,112 @@
+.SimpleMap,
+.rs-drawer .SimpleMap {
+  width: 100%;
+  font-family: Museo Sans, sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  height: 75px;
+  letter-spacing: -0.0192em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-bottom: 1px;
+}
+
+.SimpleMap .dvapp-simple-map-container,
+.rs-drawer .SimpleMap .dvapp-simple-map-container {
+  height: 100%;
+  width: 90%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.SimpleMap .dvapp-simple-map-side-scroll,
+.rs-drawer .SimpleMap .dvapp-simple-map-side-scroll {
+  width: 5%;
+}
+
+.SimpleMap .dvapp-simple-map-tooltip,
+.rs-drawer .SimpleMap .dvapp-simple-map-tooltip {
+  height: 50px;
+  width: 175px;
+  background-color: #fff;
+  border: 1px black solid;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+}
+
+.SimpleMap .dvapp-simple-map-tt-square,
+.rs-drawer .SimpleMap .dvapp-simple-map-tt-square {
+  height: 16px;
+  width: 16px;
+  padding: 8px;
+  border: 1px black solid;
+  content: ' ';
+}
+
+.SimpleMap .dvapp-simple-map-tt-text,
+.rs-drawer .SimpleMap .dvapp-simple-map-tt-text {
+  font-family: 'Museo Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 8px;
+  color: #000000;
+}
+
+.SimpleMap .rs-slider-handle::before {
+  z-index: 1000;
+}
+
+.SimpleMap .dvapp-simple-map-zoom,
+.rs-drawer .SimpleMap .dvapp-simple-map-zoom {
+  float: right;
+  position: absolute;
+  top: 75px;
+  right: 75px;
+  background: none;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.SimpleMap .dvapp-simple-map-zoom svg,
+.rs-drawer .SimpleMap .dvapp-simple-map-zoom svg {
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: 1px solid #5b6870;
+  height: 32px;
+  margin: 2px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.SimpleMap .dvapp-map-marker-circle,
+.rs-drawer .SimpleMap .dvapp-map-marker-circle {
+  border-radius: 50%;
+  display: block;
+}
+
+.SimpleMap .dvapp-map-marker-circle .dvapp-value,
+.rs-drawer .SimpleMap .dvapp-map-marker-circle .dvapp-value {
+  font-family: 'Museo Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.01925em;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

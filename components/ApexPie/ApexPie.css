@@ -1,0 +1,20 @@
+.ApexPie .apexcharts-legend,
+.rs-drawer .ApexPie .apexcharts-legend {
+  top: 5px !important;
+}
+
+.ApexPie .dvapp-panel-body,
+.rs-drawer .ApexPie .dvapp-panel-body {
+  display: inline-block !important;
+}
+.ApexPie .apexcharts-legend .apexcharts-legend-series,
+.rs-drawer .ApexPie .apexcharts-legend .apexcharts-legend-series {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0px;
+}
+
+.ApexPie,
+.rs-drawer .ApexPie {
+  height: 100%;
+}
