@@ -1,4 +1,4 @@
-name: Publish package on release tag & publish documentation
+name: Publish package & documentation
 
 on:
   release:
