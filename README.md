@@ -1,22 +1,21 @@
+![Build](https://github.com/DevoInc/App-Widgets/actions/workflows/Build.yml/badge.svg)
+![Publish](https://github.com/DevoInc/App-Widgets/actions/workflows/Publish.yml/badge.svg)
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
 # Devo App Widgets
 
 Devo App Widgets is a NPM package that contains the building blocks to start building visual widgets on Devo Apps.
 
----
-
 ## What is a Devo App?
 
 A Devo App is a front-end web browser extension capable of being injected and hosted into the Devo web platform as well as communicating with it and with the collection of HTTP services enabled for Devo customers.
-
----
 
 ## Before starting
 
 As a main requirement for the development of applications in Devo it is necessary to have access to the platform and a domain.
 
 Once you have access, to prepare the development environment you must install the google chrome extension "Devo Runner", you will find it [here](https://chrome.google.com/webstore/detail/devo-runner/apjjdfhcegcemhdhaeadkddbjhgfplmo). This extension will help the developer to be able to debug and develop their application by providing a mechanism to inject it into an existing Devo client domain.
-
----
 
 ## Instalation
 
@@ -25,8 +24,6 @@ Start by installing this package in your NPM project
 ```npm
 $ npm install @devoinc/app-widgets
 ```
-
----
 
 ## Usage
 
@@ -40,9 +37,13 @@ SimpleMap
 SingleValue
 ```
 
-You can run our storybook to watch them in action.
+You can run storybook locally to watch them in action.
 
-For specific question regarding how to use them, refer to each widget module in the documentation.
+## Documentation
+
+For specific question regarding how to use these Widgets, refer to each module in the documentation.
+
+https://devoinc.github.io/App-Widgets/
 
 ---
 
