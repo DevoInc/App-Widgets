@@ -1,8 +1,13 @@
 name: Publish package on release tag & publish documentation
 
+# on:
+#   release:
+#     types: [created]
+
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - 'fix/**'
 
 jobs:
   build:
@@ -58,28 +63,28 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages-documentation
-          build_dir: docs
+          build_dir: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  publish:
-    needs: ['build']
-    runs-on: ubuntu-latest
+  # publish:
+  #   needs: ['build']
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Set Node.js to publish
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
+  #   steps:
+  #     - name: Set Node.js to publish
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+  #         registry-url: https://registry.npmjs.org/
 
-      - name: Download build artifact (dist folder)
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
+  #     - name: Download build artifact (dist folder)
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: build-artifact
 
-      - name: Publish on npmjs registry
-        if: ${{ success() }}
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  #     - name: Publish on npmjs registry
+  #       if: ${{ success() }}
+  #       run: npm publish --access public
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
