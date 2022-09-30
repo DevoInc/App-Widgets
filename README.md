@@ -1,11 +1,9 @@
 ![Build](https://github.com/DevoInc/App-Widgets/actions/workflows/Build.yml/badge.svg)
 ![Publish](https://github.com/DevoInc/App-Widgets/actions/workflows/Publish.yml/badge.svg)
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-
 # Devo App Widgets
 
-Devo App Widgets is a NPM package that contains the building blocks to start building visual widgets on Devo Apps.
+Devo App Widgets is a library that contains the building blocks to start building visual widgets on Devo Apps.
 
 ## What is a Devo App?
 
