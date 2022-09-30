@@ -1,12 +1,8 @@
 name: Publish package on release tag & publish documentation
 
 on:
-  push:
-    tags:
-      # Tags must follow Semantic Versioning (https://semver.org/)
-      - '^v[0-9]+.[0-9]+.[0-9]+$'
-      - '^v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+$'
-      - '^v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+$'
+  release:
+    types: [created]
 
 jobs:
   build:
