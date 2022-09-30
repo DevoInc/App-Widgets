@@ -1,13 +1,8 @@
 name: Publish package on release tag & publish documentation
 
-# on:
-#   release:
-#     types: [created]
-
 on:
-  push:
-    branches:
-      - 'fix/**'
+  release:
+    types: [created]
 
 jobs:
   build:
