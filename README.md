@@ -1,6 +1,8 @@
 ![Build](https://github.com/DevoInc/App-Widgets/actions/workflows/Build.yml/badge.svg)
 ![Publish](https://github.com/DevoInc/App-Widgets/actions/workflows/Publish.yml/badge.svg)
 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
 # Devo App Widgets
 
 Devo App Widgets is a library that contains the building blocks to start building visual widgets on Devo Apps.
