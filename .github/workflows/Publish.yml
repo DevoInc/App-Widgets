@@ -1,4 +1,4 @@
-name: Publish package on release tag & publish documentation
+name: Publish package & documentation
 
 on:
   release:
@@ -29,8 +29,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: dist
           retention-days: 7
+          path: |
+            dist
+            package.json
 
       - name: Generate documentation
         run: npm run docs
@@ -40,8 +42,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: documentation-artifact
-          path: docs
           retention-days: 7
+          path: docs
 
   docs:
     needs: ['build']
@@ -58,7 +60,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages-documentation
-          build_dir: docs
+          build_dir: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
