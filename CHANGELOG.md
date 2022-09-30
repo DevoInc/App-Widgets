@@ -1,5 +1,11 @@
 # Devo App Widgets
 
+## v1.0.2
+
+**Release date**: 2022-09-30
+
+- Add Github Actions CI (Build, Publish)
+
 ## v1.0.1
 
 **Release date**: 2022-09-28
