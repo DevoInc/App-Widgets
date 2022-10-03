@@ -1,4 +1,7 @@
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: ['../components/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/preset-scss',

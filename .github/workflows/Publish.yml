@@ -1,4 +1,4 @@
-name: Publish package & documentation
+name: Publish package, docs and storybook
 
 on:
   release:
@@ -30,9 +30,11 @@ jobs:
         with:
           name: build-artifact
           retention-days: 7
+          if-no-files-found: error
           path: |
             dist
             package.json
+            README.md
 
       - name: Generate documentation
         run: npm run docs
@@ -43,9 +45,23 @@ jobs:
         with:
           name: documentation-artifact
           retention-days: 7
+          if-no-files-found: error
           path: docs
 
-  docs:
+      - name: Generate storybook static files
+        run: npm run storybook:build
+
+      - name: Upload storybook artifact
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: storybook-artifact
+          retention-days: 7
+          if-no-files-found: error
+          path: storybook-static-build
+
+  # This Job generates both a static documentation webpage and a static demo website using storybooks
+  docs-and-storybook:
     needs: ['build']
     runs-on: ubuntu-latest
 
@@ -55,11 +71,25 @@ jobs:
         with:
           name: documentation-artifact
 
-      - name: Deploy documentation to GitHub Pages
+      # Github Pages only allows one website per repository, therefore we need to create a subfolder to host the storybook (demo) website
+      - name: generate storybook folder
+        run: mkdir ./demo
+
+      - name: Download storybook artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook-artifact
+          path: ./demo/
+
+      # This command serves as a debug tool to verify our folder structure is correct
+      - name: Display structure of downloaded artifacts
+        run: ls -R
+
+      - name: Create GitHub Pages branch
         if: ${{ success() }}
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          target_branch: gh-pages-documentation
+          target_branch: gh-pages-documentation-and-storybook
           build_dir: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
