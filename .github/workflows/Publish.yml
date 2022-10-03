@@ -1,8 +1,13 @@
 name: Publish package & documentation
 
+# on:
+#   release:
+#     types: [created]
+
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - 'feature/**'
 
 jobs:
   build:
@@ -56,7 +61,7 @@ jobs:
           retention-days: 7
           path: storybook-static-build
 
-  docs:
+  gh-pages:
     needs: ['build']
     runs-on: ubuntu-latest
 
@@ -66,52 +71,49 @@ jobs:
         with:
           name: documentation-artifact
 
-      - name: Deploy documentation to GitHub Pages
-        if: ${{ success() }}
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages-documentation
-          build_dir: ./
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: generate storybook folder
+        run: mkdir ./storybook
 
-  storybook:
-    needs: ['build']
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Download storybook artifact
         uses: actions/download-artifact@v3
         with:
           name: storybook-artifact
+          path: ./storybook/
 
-      - name: Deploy storybook to GitHub Pages
-        if: ${{ success() }}
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages-storybook
-          build_dir: ./
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Display structure of downloaded artifacts
+        run: ls -R
 
-  publish:
-    needs: ['build']
-    runs-on: ubuntu-latest
+      - name: Display structure of downloaded storybok artifacts
+        run: ls -R
+        working-directory: ./storybook/
 
-    steps:
-      - name: Set Node.js to publish
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
+      # - name: Create GitHub Pages branch
+      #   if: ${{ success() }}
+      #   uses: crazy-max/ghaction-github-pages@v3
+      #   with:
+      #     target_branch: gh-pages-documentation-storybook
+      #     build_dir: ./
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download build artifact (dist folder)
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
+  # publish:
+  #   needs: ['build']
+  #   runs-on: ubuntu-latest
 
-      - name: Publish on npmjs registry
-        if: ${{ success() }}
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  #   steps:
+  #     - name: Set Node.js to publish
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+  #         registry-url: https://registry.npmjs.org/
+
+  #     - name: Download build artifact (dist folder)
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: build-artifact
+
+  #     - name: Publish on npmjs registry
+  #       if: ${{ success() }}
+  #       run: npm publish --access public
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
