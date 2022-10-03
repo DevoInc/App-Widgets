@@ -56,6 +56,7 @@ jobs:
           retention-days: 7
           path: storybook-static-build
 
+  # This Job generates both a static documentation webpage and a static demo website using storybooks
   docs-and-storybook:
     needs: ['build']
     runs-on: ubuntu-latest
@@ -66,15 +67,17 @@ jobs:
         with:
           name: documentation-artifact
 
+      # Github Pages only allows one website per repository, therefore we need to create a subfolder to host the storybook (demo) website
       - name: generate storybook folder
-        run: mkdir ./storybook
+        run: mkdir ./demo
 
       - name: Download storybook artifact
         uses: actions/download-artifact@v3
         with:
           name: storybook-artifact
-          path: ./storybook/
+          path: ./demo/
 
+      # This command serves as a debug tool to verify our folder structure is correct
       - name: Display structure of downloaded artifacts
         run: ls -R
 
