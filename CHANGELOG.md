@@ -1,5 +1,14 @@
 # Devo App Widgets
 
+## v1.0.4
+
+**Release date**: 2022-10-03
+
+- Add storybook website generation on Github Actions
+- Merge documentation and storybook websites into the same Github Pages domain
+- Update README
+- Update documentation
+
 ## v1.0.3
 
 **Release date**: 2022-09-30
