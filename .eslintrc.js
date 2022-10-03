@@ -36,7 +36,13 @@ module.exports = {
     },
   },
   rules: { ...rulesBaseObject },
-  ignorePatterns: ['dist', 'coverage'],
+  ignorePatterns: [
+    'dist',
+    'coverage',
+    'docs',
+    'storybook-static-build',
+    'i18n/locales',
+  ],
   overrides: [
     // test files
     {
