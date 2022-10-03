@@ -61,7 +61,7 @@ jobs:
           retention-days: 7
           path: storybook-static-build
 
-  gh-pages:
+  docs-and-storybook:
     needs: ['build']
     runs-on: ubuntu-latest
 
@@ -83,18 +83,14 @@ jobs:
       - name: Display structure of downloaded artifacts
         run: ls -R
 
-      - name: Display structure of downloaded storybok artifacts
-        run: ls -R
-        working-directory: ./storybook/
-
-      # - name: Create GitHub Pages branch
-      #   if: ${{ success() }}
-      #   uses: crazy-max/ghaction-github-pages@v3
-      #   with:
-      #     target_branch: gh-pages-documentation-storybook
-      #     build_dir: ./
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create GitHub Pages branch
+        if: ${{ success() }}
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages-documentation-and-storybook
+          build_dir: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # publish:
   #   needs: ['build']
