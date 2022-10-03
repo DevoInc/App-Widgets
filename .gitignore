@@ -5,7 +5,7 @@ dist
 test-output.*
 .cache
 .parcel-cache
-storybook-static
+storybook-static-build
 .env
 .eslintcache
 .vscode
