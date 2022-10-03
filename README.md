@@ -7,6 +7,14 @@
 
 Devo App Widgets is a library that contains the building blocks to start building visual widgets on Devo Apps.
 
+## Live demo 🌈
+
+You can explore this library and interact with widgets directly by using in the following link:
+
+https://devoinc.github.io/App-Widgets/storybook
+
+---
+
 ## What is a Devo App?
 
 A Devo App is a front-end web browser extension capable of being injected and hosted into the Devo web platform as well as communicating with it and with the collection of HTTP services enabled for Devo customers.
@@ -16,6 +24,8 @@ A Devo App is a front-end web browser extension capable of being injected and ho
 As a main requirement for the development of applications in Devo it is necessary to have access to the platform and a domain.
 
 Once you have access, to prepare the development environment you must install the google chrome extension "Devo Runner", you will find it [here](https://chrome.google.com/webstore/detail/devo-runner/apjjdfhcegcemhdhaeadkddbjhgfplmo). This extension will help the developer to be able to debug and develop their application by providing a mechanism to inject it into an existing Devo client domain.
+
+---
 
 ## Instalation
 
@@ -37,7 +47,7 @@ SimpleMap
 SingleValue
 ```
 
-You can run storybook locally to watch them in action.
+You can visit our [Storybook website](https://devoinc.github.io/App-Widgets/storybook) to watch them in action.
 
 ## Documentation
 
