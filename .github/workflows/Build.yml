@@ -30,3 +30,6 @@ jobs:
 
       - name: Generate documentation
         run: npm run docs
+
+      - name: Generate storybook static files
+        run: npm run storybook:build

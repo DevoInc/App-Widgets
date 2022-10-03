@@ -45,6 +45,17 @@ jobs:
           retention-days: 7
           path: docs
 
+      - name: Generate storybook static files
+        run: npm run storybook:build
+
+      - name: Upload storybook artifact
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: storybook-artifact
+          retention-days: 7
+          path: storybook-static-build
+
   docs:
     needs: ['build']
     runs-on: ubuntu-latest
@@ -60,6 +71,25 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages-documentation
+          build_dir: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  storybook:
+    needs: ['build']
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download storybook artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook-artifact
+
+      - name: Deploy storybook to GitHub Pages
+        if: ${{ success() }}
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages-storybook
           build_dir: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

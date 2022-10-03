@@ -26,7 +26,7 @@
     "type:check": "tsc --noEmit",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
+    "storybook:build": "build-storybook -o ./storybook-static-build",
     "docs": "rm -rf docs && typedoc --options typedoc.json ./components/index.ts"
   },
   "repository": {
