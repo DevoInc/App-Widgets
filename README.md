@@ -11,7 +11,7 @@ Devo App Widgets is a library that contains the building blocks to start buildin
 
 You can explore this library and interact with widgets directly by using in the following link:
 
-https://devoinc.github.io/App-Widgets/storybook
+https://devoinc.github.io/App-Widgets/demo
 
 ---
 
@@ -47,7 +47,7 @@ SimpleMap
 SingleValue
 ```
 
-You can visit our [Storybook website](https://devoinc.github.io/App-Widgets/storybook) to watch them in action.
+You can visit our [Storybook website](https://devoinc.github.io/App-Widgets/demo) to watch them in action.
 
 ## Documentation
 
