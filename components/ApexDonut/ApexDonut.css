@@ -14,6 +14,21 @@
   margin: 0px;
 }
 
+.ApexDonut .apexcharts-legend .apexcharts-legend-text {
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ApexDonut .apexcharts-legend.apexcharts-align-right .apexcharts-legend-series,
+.apexcharts-legend.apexcharts-align-left .apexcharts-legend-series {
+  display: flex !important;
+  align-items: center;
+}
+
 .ApexDonut,
 .rs-drawer .ApexDonut {
   height: 100%;

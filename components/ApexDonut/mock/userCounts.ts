@@ -2,7 +2,7 @@ import { ApexDonutData } from '../ApexDonut.d';
 
 const userCounts: ApexDonutData[] = [
   {
-    label: 'us-east-1',
+    label: 'us-east-1-special-region',
     value: 160203,
   },
   {
