@@ -20,3 +20,14 @@ const Template: ComponentStory<typeof ApexPie> = (props) => {
 
 export const Default = Template.bind({});
 Default.args = { ...defaultProps };
+
+const SquaredContainerTemplate: ComponentStory<typeof ApexPie> = (props) => {
+  return (
+    <div style={{ width: '250px' }}>
+      <ApexPie {...props} />
+    </div>
+  );
+};
+
+export const HidenLegend = SquaredContainerTemplate.bind({});
+HidenLegend.args = { ...defaultProps, hideLegend: true };
