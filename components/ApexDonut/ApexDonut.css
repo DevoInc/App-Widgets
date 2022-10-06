@@ -14,6 +14,10 @@
   margin: 0px;
 }
 
+.ApexDonut .apexcharts-inner.apexcharts-graphical {
+  margin-top: 60px;
+}
+
 .ApexDonut .apexcharts-legend .apexcharts-legend-text {
   display: inline-block;
   position: relative;
