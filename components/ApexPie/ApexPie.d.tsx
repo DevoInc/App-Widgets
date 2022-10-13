@@ -10,5 +10,6 @@ export type ApexPieProps = {
   height?: number;
   legend_width?: number;
   colorScale?: string[];
+  hideLegend?: boolean;
   chartOptionsOverrides?: ChartOptions;
 };

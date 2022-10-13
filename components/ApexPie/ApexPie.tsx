@@ -52,7 +52,14 @@ export const defaultApexPieProps = {
 export const ApexPie: FC<ApexPieProps> = (props) => {
   const { t } = useTranslation();
 
-  const { data, colorScale, height, legend_width, chartOptionsOverrides } = {
+  const {
+    data,
+    colorScale,
+    height,
+    legend_width,
+    hideLegend,
+    chartOptionsOverrides,
+  } = {
     ...defaultApexPieProps,
     ...props,
   };
@@ -79,6 +86,7 @@ export const ApexPie: FC<ApexPieProps> = (props) => {
       colors: colorScale,
     },
     legend: {
+      show: !hideLegend,
       height: height - 15,
       width: legend_width,
     },

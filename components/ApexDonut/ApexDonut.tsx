@@ -32,6 +32,7 @@ export const defaultApexDonutProps = {
   donutSpacePercentage: 75,
   legendWidth: 150,
   colorScale: fullColorPalette,
+  hideLegend: false,
 };
 
 /**
@@ -69,6 +70,7 @@ export const ApexDonut: FC<ApexDonutProps> = (props) => {
     height,
     donutSpacePercentage,
     legendWidth,
+    hideLegend,
     chartOptionsOverrides,
   } = {
     ...defaultApexDonutProps,
@@ -104,6 +106,7 @@ export const ApexDonut: FC<ApexDonutProps> = (props) => {
       },
     },
     legend: {
+      show: !hideLegend,
       height: height - 5,
       width: legendWidth,
     },

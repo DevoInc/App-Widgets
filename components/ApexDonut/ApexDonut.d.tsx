@@ -11,5 +11,6 @@ export type ApexDonutProps = {
   donutSpacePercentage?: number;
   legendWidth?: number;
   colorScale?: string[];
+  hideLegend?: boolean;
   chartOptionsOverrides?: Partial<ChartOptions>;
 };
