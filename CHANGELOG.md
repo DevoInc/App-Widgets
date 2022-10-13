@@ -1,5 +1,12 @@
 # Devo App Widgets
 
+## v1.0.5
+
+**Release date**: 2022-10-13
+
+- Update styles on Donut and Pie widgets
+- Add hideLegend prop on Donut and Pie widgets
+
 ## v1.0.4
 
 **Release date**: 2022-10-03
