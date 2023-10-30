@@ -1,6 +1,6 @@
 {
   "name": "@devoinc/app-widgets",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Devo library that contains the building blocks to start building visual widgets on Devo Apps.",
   "source": "index.ts",
   "main": "dist/main.js",
