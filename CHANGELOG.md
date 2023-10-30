@@ -1,5 +1,11 @@
 # Devo App Widgets
 
+## v1.0.6
+
+**Release date**: 2023-10-30
+
+- Fix vulns
+
 ## v1.0.5
 
 **Release date**: 2022-10-13
